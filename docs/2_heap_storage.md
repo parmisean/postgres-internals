@@ -44,4 +44,4 @@ Every tuple will consist of a tuple header and the actual tuple data. The tuple 
 - Talk about tuple visibility and deletion
 - Talk about vacuuming and freezing tuples
 
-[Process Architecture](1_process_architecture.md) | [Write-Ahead Logging](3_wal.md)
+[Process Architecture](1_process_architecture.md) | [Introduction](../README.md) | [Write-Ahead Logging](3_wal.md)
