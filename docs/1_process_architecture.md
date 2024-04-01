@@ -8,6 +8,8 @@ Postgres uses a multi-process architecture for handling client connections and q
 - **Backend Processes**: Backend processes are responsible for handling client queries and managing database operations on their behalf. Each backend process is associated with a single client connection.
 - **Background Processes**: Background processes are used for performing maintenance tasks and background operations. Some examples would be the `Checkpointer` which flushes dirty data from memory to disk, the `WalWriter` which writes WAL data to disk, and the `Autovacuum Launcher` which performs automatic vacuum and analyze operations to maintain database health.
 
+![Postgres Client Process Diagram](../image/postgres_client_processes.png)
+
 Postgres will maintain a pool of backend processes that can be assigned to a client when a new connection is established. If there are no available backend processes in the pool, the postmaster will spawn a new backend process to handle the connection.
 
 This architecture allows Postgres to handle multiple client connections concurrently and provides a dedicated and isolated virtual memory space for each client connection. The process oriented architecture can create overhead when dealing with a large number of client connections however, and CPU exhaustion for clients can happen when the number of client connections exceeds the number of available CPU cores.
