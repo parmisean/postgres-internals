@@ -25,7 +25,7 @@ typedef struct PageHeaderData
 } PageHeaderData;
 ```
 
-The [line pointer](https://github.com/postgres/postgres/blob/master/src/include/storage/itemid.h) (LP) array contains pointers to the tuples stored on the page. Each LP entry consists of an offset to the start of the tuple, the length of the tuple, and a flag indicating the state of the tuple.
+The line pointer (LP) array contains [pointers](https://github.com/postgres/postgres/blob/master/src/include/storage/itemid.h) to the tuples stored on the page. Each LP entry consists of an offset to the start of the tuple, the length of the tuple, and a flag indicating the state of the tuple.
 
 ```C
 typedef struct ItemIdData
