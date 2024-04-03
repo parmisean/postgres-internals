@@ -11,6 +11,8 @@
 ## Articles
 
 - [Postgres Process Architecture by Hussein Nasser](https://medium.com/@hnasr/postgresql-process-architecture-f21e16459907)
+- [How Does Vacuum Work in PostgreSQL by Richard Yen](https://www.enterprisedb.com/postgres-tutorials/how-does-vacuum-work-postgresql)
+- [Structure of Heap Table in PostgreSQL by Azat Yakupov of Quadcode](https://medium.com/quadcode-life/structure-of-heap-table-in-postgresql-d44c94332052)
 
 ## Code Files
 
