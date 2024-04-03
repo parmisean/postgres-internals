@@ -4,7 +4,9 @@ When you insert or update rows in a table, PostgreSQL stores the data in segment
 
 Each segment file is further divided into fixed-size pages, which are the smallest unit of storage in Postgres. Each page typically stores multiple tuples, and the layout of a page in a segment file can be seen in the diagram below.
 
-![Postgres Page Layout Example](../image/postgres_page_layout.png)
+<p align="center">
+  <img src="../image/postgres_page_layout.png" width="750" />
+</p>
 
 The [page header](https://github.com/postgres/postgres/blob/master/src/include/storage/bufpage.h) contains metadata about the page such as the page checksum, pointers to the upper and lower tuples, and the total number of tuples stored.
 

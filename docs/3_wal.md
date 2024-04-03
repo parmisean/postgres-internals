@@ -8,15 +8,22 @@ The WAL records are stored in a series of segments, called WAL files. These reco
 
 Each WAL record is identified by a Log Sequence Number (LSN). The LSN is stored in the page header of each data page, and is used to track the progress of replication or crash recovery, as well as ensuring that changes are applied in the correct order.
 
-## Checkpoints and Replication
+## Checkpoints
 
-![WAL Lifecycle Example](../image/wal_lifecycle.png)
+<p align="center">
+  <img src="../image/wal_lifecycle.png" width="800" />
+</p>
 
 When a client backend process writes a change to the database, the change is first written to the WAL buffer in memory. Any shared buffers that are impacted by that change are also marked as dirty. Periodically, the shared buffers are flushed to disk, and the changes are written to the data file. This process is called a `checkpoint`.
 
-TODO:
+## Replication
 
-- Explain how WAL is used in replication
-- Explain checkpointer process
+Postgres uses the WAL mechanism for replication, allowing changes made to a primary server to be replayed on the on one or more standby servers. Replication can be synchronous or asynchronous, and can be used for high availability, read scaling, or disaster recovery.
+
+<p align="center">
+  <img src="../image/wal_replication.png" width="500" />
+</p>
+
+In streaming replication, the primary server continuously streams WAL records to the replicas. The replicas apply the changes in the same order as they were made on the primary, ensuring that the data remains consistent across all servers. The Log Sequence Numbers (LSN) in the WAL files are used to track the progress of replication, allowing replicas to request only the new WAL records when catching up.
 
 [Heap Storage](2_heap_storage.md) | [Introduction](../README.md) | [Query Parser](4_query_parser.md)
