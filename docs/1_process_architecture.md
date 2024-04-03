@@ -1,6 +1,6 @@
 # Process Architecture
 
-Postgres uses a multi-process architecture for handling client connections and queries. Understanding the PostgreSQL process model can help you optimize resource usage and troubleshoot performance issues.
+Postgres uses a multi-process architecture for handling [client connections](https://www.postgresql.org/docs/current/connect-estab.html) and queries. Understanding the PostgreSQL process model can help you optimize resource usage and troubleshoot performance issues.
 
 ## Process Types
 
