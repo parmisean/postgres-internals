@@ -10,7 +10,7 @@
 
 ## Articles
 
-- [Postgres Process Architecture](https://medium.com/@hnasr/postgresql-process-architecture-f21e16459907)
+- [Postgres Process Architecture by Hussein Nasser](https://medium.com/@hnasr/postgresql-process-architecture-f21e16459907)
 
 ## Code Files
 
