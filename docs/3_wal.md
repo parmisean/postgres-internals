@@ -18,7 +18,7 @@ When a client backend process writes a change to the database, the change is fir
 
 ## Replication
 
-Postgres uses the WAL mechanism for replication, allowing changes made to a primary server to be replayed on the on one or more standby servers. Replication can be synchronous or asynchronous, and can be used for high availability, read scaling, or disaster recovery.
+Postgres uses the WAL mechanism for replication, allowing changes made to a primary server to be replayed on one or more standby servers. Replication can be synchronous or asynchronous, and can be used for high availability, read scaling, or disaster recovery.
 
 <p align="center">
   <img src="../image/wal_replication.png" width="500" />
