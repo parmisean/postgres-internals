@@ -2,6 +2,10 @@
 
 The [Query Parser](https://www.postgresql.org/docs/current/parser-stage.html) is responsible for parsing SQL queries, interpreting their structure, and generating an internal representation of the query that can be executed by the query planner and executor. The Query Parser is implemented using a tool called [Yet Another Compiler-Compiler (YACC)](https://en.wikipedia.org/wiki/Yacc) to generate a parser from a grammar specification.
 
+<p align="center">
+  <img src="../image/query_lifecycle.png" width="500" />
+</p>
+
 The query parser will first perform lexical analysis, also known as tokenization, where it breaks down the input SQL query into a sequence of tokens such as keywords, identifiers, literals, and operators. You can find the scanner implementing in the [scan.l](https://github.com/postgres/postgres/blob/master/src/backend/parser/scan.l) file.
 
 Next, the parser performs syntax analysis, also known as parsing, where it checks the sequence of tokens against the rules of the SQL grammar defined in [gram.y](https://github.com/postgres/postgres/blob/master/src/backend/parser/gram.y) to ensure that the query is syntactically correct. If the query contains any syntax errors, the parser will report them to the user.

@@ -10,7 +10,7 @@ The cost will be displayed near the top of the explain results, similar to the f
 
 ## Buffer Statistics
 
-Each buffer is typically 8KiB in size and is used to cache data pages in memory. The buffer statistics in the query plan show how many buffers were read and written during the query execution. The number of buffers read or written is an indication of the number of disk IO required to execute the query.
+Each buffer is typically 8KiB in size and is used to cache data pages in memory. The buffer statistics in the query plan show how many buffers were read and written during the query execution, and will indicate the amount of disk IO required to execute the query.
 
 ## Optimizing a Query
 
