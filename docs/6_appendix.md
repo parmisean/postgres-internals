@@ -8,6 +8,7 @@
 - [Postgres Docs: Parser Stage](https://www.postgresql.org/docs/current/parser-stage.html)
 - [Wiki: Yet Another Compiler-Compiler (YACC)](https://en.wikipedia.org/wiki/Yacc)
 - [Postgres Docs: Explain](https://www.postgresql.org/docs/current/sql-explain.html)
+- [Postgres Docs: System Columns](https://www.postgresql.org/docs/current/ddl-system-columns.html)
 
 ## Articles
 

@@ -2,7 +2,7 @@
 
 When you insert or update rows in a table, PostgreSQL stores the data in segment or heap files which are physical files on disk that store a portion of a tables data. You can find the implementation for many of the heap access routines in [heapam.c](https://github.com/postgres/postgres/blob/master/src/backend/access/heap/heapam.c).
 
-Each segment file is further divided into fixed-size pages, which are the smallest unit of storage in Postgres. Each page typically stores multiple tuples, and the layout of a page in a segment file can be seen in the diagram below.
+Each segment file is further divided into fixed-size pages, which are the smallest unit of storage in Postgres. Each page typically stores multiple tuples, which are identified by a unique tuple identifier (CTID) which is a [system column](https://www.postgresql.org/docs/current/ddl-system-columns.html) that consists of the page number and the tuple index on the page. The layout of a page in a heap data file can be seen in the diagram below.
 
 <p align="center">
   <img src="../image/page_layout.png" width="750" />
@@ -27,7 +27,7 @@ typedef struct PageHeaderData
 } PageHeaderData;
 ```
 
-The line pointer (LP) array contains [pointers](https://github.com/postgres/postgres/blob/master/src/include/storage/itemid.h) to the tuples stored on the page. Each LP entry consists of an offset to the start of the tuple, the length of the tuple, and a flag indicating the state of the tuple.
+The line pointer (LP) array contains [pointers](https://github.com/postgres/postgres/blob/master/src/include/storage/itemid.h) to the tuples stored on the page. Indexes will store the CTID of the tuple in the index, which contains the page number and the tuple index in the line pointer array on the page. Each line pointer entry consists of an offset to the start of the tuple, the length of the tuple, and a flag indicating the state of the tuple.
 
 ```C
 typedef struct ItemIdData
