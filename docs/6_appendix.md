@@ -7,6 +7,7 @@
 - [Postgres Docs: Write-Ahead Logging (WAL)](https://www.postgresql.org/docs/current/wal-internals.html)
 - [Postgres Docs: Parser Stage](https://www.postgresql.org/docs/current/parser-stage.html)
 - [Wiki: Yet Another Compiler-Compiler (YACC)](https://en.wikipedia.org/wiki/Yacc)
+- [Postgres Docs: Explain](https://www.postgresql.org/docs/current/sql-explain.html)
 
 ## Articles
 
