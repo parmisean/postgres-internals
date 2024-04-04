@@ -5,7 +5,7 @@ When you insert or update rows in a table, PostgreSQL stores the data in segment
 Each segment file is further divided into fixed-size pages, which are the smallest unit of storage in Postgres. Each page typically stores multiple tuples, which are identified by a unique tuple identifier (CTID) which is a [system column](https://www.postgresql.org/docs/current/ddl-system-columns.html) that consists of the page number and the tuple index on the page. The layout of a page in a heap data file can be seen in the diagram below.
 
 <p align="center">
-  <img src="../image/page_layout.png" width="750" />
+  <img src="../image/page_layout.png" width="700" />
 </p>
 
 The [page header](https://github.com/postgres/postgres/blob/master/src/include/storage/bufpage.h) contains metadata about the page such as the page checksum, pointers to the upper and lower tuples, and the total number of tuples stored.

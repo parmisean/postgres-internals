@@ -9,7 +9,7 @@ Postgres uses a multi-process architecture for handling [client connections](htt
 - **Background Processes**: Background processes are used for performing maintenance tasks and background operations. Some examples would be the `Checkpointer` which flushes dirty data from memory to disk, the `WalWriter` which writes WAL data to disk, and the `Autovacuum Launcher` which performs automatic vacuum and analyze operations to maintain database health.
 
 <p align="center">
-  <img src="../image/postgres_processes.png" width="800" />
+  <img src="../image/postgres_processes.png" width="750" />
 </p>
 
 Postgres will maintain a pool of backend processes that can be assigned to a client when a new connection is established. If there are no available backend processes in the pool, the postmaster will spawn a new backend process to handle the connection.
