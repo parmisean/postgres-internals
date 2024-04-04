@@ -26,4 +26,4 @@ Postgres uses the WAL mechanism for replication, allowing changes made to a prim
 
 In streaming replication, the primary server continuously streams WAL records to the replicas. The replicas apply the changes in the same order as they were made on the primary, ensuring that the data remains consistent across all servers. The Log Sequence Numbers (LSN) in the WAL files are used to track the progress of replication, allowing replicas to request only the new WAL records when catching up.
 
-[Heap Storage](2_heap_storage.md) | [Introduction](../README.md) | [Query Parser](4_query_parser.md)
+[Process Architecture](1_process_architecture.md) | [Introduction](../README.md) | [Heap Storage](3_heap_storage.md)

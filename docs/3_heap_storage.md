@@ -44,4 +44,4 @@ If a new tuple is stored on the same page as the old tuple, and no indexed colum
 
 The fill factor for a table determines how much space Postgres will leave on each page for insertions or updates. When you insert a new tuple into a page, Postgres will first check if there is enough space to store the tuple. If there is not enough space, Postgres will perform a page split and move some of the tuples to a new page. Tuning the fill factor value can help reduce the likelihood of page splits and fragmentation or increase the likelihood of a HOT update occurring. The downside of setting a lower fill factor is that it will increase the number of pages required to store the same number of tuples, increasing storage costs and the IO required for sequential scans.
 
-[Process Architecture](1_process_architecture.md) | [Introduction](../README.md) | [Write-Ahead Logging](3_wal.md)
+[Write-Ahead Logging](2_wal.md) | [Introduction](../README.md) | [Query Parser](4_query_parser.md)

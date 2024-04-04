@@ -24,4 +24,4 @@ Postgres uses a shared memory architecture to manage memory across processes.
 - **WAL Buffer**: The Write-Ahead Log (WAL) buffer is used to store WAL records before they are written to disk and helps ensure that changes are durable.
 - **Local Process Memory**: Each backend process has its own local memory space for storing query plans, intermediate results, and other per-process data.
 
-[Introduction](../README.md) | [Heap Storage](2_heap_storage.md)
+[Introduction](../README.md) | [Write-Ahead Logging](2_wal.md)

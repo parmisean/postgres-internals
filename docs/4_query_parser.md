@@ -24,4 +24,4 @@ In addition to parsing and analyzing queries, the query parser in Postgres also 
 - Join Order Optimization: Optimizing the order in which tables are joined to minimize the number of join operations and improve query performance.
 - Subquery Optimization: Rewriting subqueries to improve performance by reducing the number of times they need to be evaluated.
 
-[Write-Ahead Logging](3_wal.md) | [Introduction](../README.md) | [Query Optimization](5_query_optimization.md)
+[Heap Storage](3_heap_storage.md) | [Introduction](../README.md) | [Query Optimization](5_query_optimization.md)
