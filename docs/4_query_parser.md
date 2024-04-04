@@ -11,7 +11,7 @@ After the query is parsed, the parser performs semantic analysis, where it check
 Once the query has been successfully parsed and analyzed, the parser generates an abstract syntax tree (AST) known as the query tree or parse tree. This query tree is a hierarchical structure that represents the logical structure of the query and is used by the query planner and executor to generate an execution plan.
 
 <p align="center">
-  <img src="../image/syntax_tree.png" width="750" />
+  <img src="../image/parse_tree.png" width="750" />
 </p>
 
 In addition to parsing and analyzing queries, the query parser in Postgres also performs query rewriting and optimization. This includes tasks such as:

@@ -22,5 +22,6 @@
 - [Line Pointer Array Items: itemid.h](https://github.com/postgres/postgres/blob/master/src/include/storage/itemid.h)
 - [Scanner: scan.l](https://github.com/postgres/postgres/blob/master/src/backend/parser/scan.l)
 - [Grammar: gram.y](https://github.com/postgres/postgres/blob/master/src/backend/parser/gram.y)
+- [Parse Tree Node Definition: parse_node.h](https://github.com/postgres/postgres/blob/master/src/include/parser/parse_node.h)
 
 [Query Optimization](5_query_optimization.md) | [Introduction](../README.md)

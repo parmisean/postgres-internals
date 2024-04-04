@@ -1,6 +1,6 @@
 # Query Optimization
 
-The [EXPLAIN](https://www.postgresql.org/docs/current/sql-explain.html) statement is a powerful tool for understanding how Postgres executes your queries. It provides insights into the query plan chosen by the query optimizer.
+The [EXPLAIN](https://www.postgresql.org/docs/current/sql-explain.html) statement is a powerful tool for understanding how Postgres executes your queries, providing insights into the query plan chosen by the query optimizer.
 
 ## Cost Statistics
 
