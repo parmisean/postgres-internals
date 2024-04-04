@@ -6,13 +6,13 @@ The [Query Parser](https://www.postgresql.org/docs/current/parser-stage.html) is
   <img src="../image/query_lifecycle.png" width="500" />
 </p>
 
-The query parser will first perform lexical analysis, also known as tokenization, where it breaks down the input SQL query into a sequence of tokens such as keywords, identifiers, literals, and operators. You can find the scanner implementing in the [scan.l](https://github.com/postgres/postgres/blob/master/src/backend/parser/scan.l) file.
+The query parser will first perform lexical analysis, also known as tokenization, where it breaks down the input SQL query into a sequence of tokens such as keywords, identifiers, literals, and operators. You can find the scanner implementation in the [scan.l](https://github.com/postgres/postgres/blob/master/src/backend/parser/scan.l) file.
 
 Next, the parser performs syntax analysis, also known as parsing, where it checks the sequence of tokens against the rules of the SQL grammar defined in [gram.y](https://github.com/postgres/postgres/blob/master/src/backend/parser/gram.y) to ensure that the query is syntactically correct. If the query contains any syntax errors, the parser will report them to the user.
 
 After the query is parsed, the parser performs semantic analysis, where it checks the query for semantic errors such as referencing non-existent tables or columns, ambiguous column references, and type mismatches. The parser also resolves any aliases or qualified names used in the query.
 
-Once the query has been successfully parsed and analyzed, the parser generates an abstract syntax tree (AST) known as the query tree or parse tree. This query tree is a hierarchical structure that represents the logical structure of the query and is used by the query planner and executor to generate an execution plan.
+Once the query has been successfully parsed and analyzed, the parser generates an abstract syntax tree (AST) known as the query tree or parse tree. This parse tree is a hierarchical structure that represents the logical structure of the query and is used by the query planner to generate an execution plan.
 
 <p align="center">
   <img src="../image/parse_tree.png" width="750" />
